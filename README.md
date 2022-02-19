@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+Lesson 14
+---------
+npx create-react-app react-redux-demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+cd react-redux-demo
 
-## Available Scripts
+npm install redux react-redux
 
-In the project directory, you can run:
+1. Javascript APPLICATION: the application is maintained separately in the Redux store, the application always subscribe to Redux Store for its state, however, it cannot change its state directly.
 
-### `npm start`
+=> 2. ACTION: if the application wants to update the state, it has to emit or dispatch an action.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+=> 3. REDUCER: once the action has been dispatched, the reducer then handles the action and update the current state.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+=> 4. REDUX STORE: the newly changed state is kept in the redux store.
 
-### `npm test`
+=> 1. APPLICATION: get the newly changed state since the application subscribes to the Redux Store.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is how redux works...
+=====================================================================================
 
-### `npm run build`
+Lesson 15 - Lesson 18
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Action(buyCake) : 
+App.js => components/CakeContainer14.js => redux/index18.js => redux/cake/cakeAction15.js => redux/cake/cakeTypes15.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* State(numOfCakes): 
+App.js => components/CakeContainer14.js => redux/store17.js => redux/cake/cakeReducer16.js => redux/cake/cakeTypes15.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This is the most basic pattern of how redux works in react.
 
-### `npm run eject`
+mapStateToProps can be renamed to anything, but please keep the name it is.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
