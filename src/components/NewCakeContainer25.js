@@ -37,3 +37,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NewCakeContainer25)
+
+
+// action.payload for changing to any numbers of cakes
